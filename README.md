@@ -1,8 +1,8 @@
-== EDDN
+## EDDN
 
 "[The Elite: Dangerous Data Network is a system for willing Commanders to share dynamic data about the galaxy with others. By pooling data in a common format, tools and analyses can be produced that add an even greater depth and vibrancy to the in-game universe.](https://github.com/jamesremuscat/EDDN/wiki)" - https://github.com/jamesremuscat/EDDN/wiki
 
-== Setup
+## Setup
 
 Run the setup.sql script from the command line:
 
@@ -10,11 +10,11 @@ Run the setup.sql script from the command line:
 
 or copy the contents into your MySQL client and execute it there.
 
-== Running
+## Running
 
     $ node app.js
 
-== Background
+## Background
 
 Source Thread https://forums.frontier.co.uk/showthread.php?t=57986
 
