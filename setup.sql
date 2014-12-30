@@ -12,7 +12,6 @@ CREATE TABLE markets (
 	demand float default 0.0,
 	buyPrice float default 0.0,
 	sellPrice float default 0.0,
-	categoryName varchar(64) default '',
  	`timestamp` varchar(64)
 );
 

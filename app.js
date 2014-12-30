@@ -25,7 +25,7 @@ sock.on('message', function(message) {
         ;
 
         //fixme: escape data
-        conn.query('INSERT INTO markets SET ?', data, function(err, result) {
+        conn.query('INSERT INTO markets SET ?', strictify(data), function(err, result) {
             if (err) console.log('[db] %s', err.toString());
         });
 
@@ -36,3 +36,17 @@ sock.on('message', function(message) {
         );
     });
 });
+
+// Adhere to schema, per https://forums.frontier.co.uk/showthread.php?t=57986&p=1393865&viewfull=1#post1393865
+function strictify(obj) {
+    return {
+        systemName: obj.systemName      || '',
+        stationName: obj.stationName    || '',
+        itemName: obj.itemName          || '',
+        buyPrice: obj.buyPrice          || 0.0,
+        stationStock: obj.stationStock  || 0.0,
+        sellPrice: obj.sellPrice        || 0.0,
+        demand: obj.demand              || 0.0,
+        timestamp: obj.timestamp        || ''
+    };
+}
