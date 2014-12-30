@@ -1,21 +1,36 @@
-## EDDN
+A simple node.js client for the EDDN service
 
-"[The Elite: Dangerous Data Network is a system for willing Commanders to share dynamic data about the galaxy with others. By pooling data in a common format, tools and analyses can be produced that add an even greater depth and vibrancy to the in-game universe.](https://github.com/jamesremuscat/EDDN/wiki)" - https://github.com/jamesremuscat/EDDN/wiki
+## Introduction
 
-## Setup
+This client subscribes to commodity messages published by EDDN-enabled tools. When commodity information is published for a particular station, the data is updated in simple MySQL table.
 
-Run the setup.sql script from the command line:
+This client is not intended for production use; it is meant only as an example and proof-of-concept.
 
-    $ mysql -u root -p < setup.sql
+## Synopsis
 
-or copy the contents into your MySQL client and execute it there.
+Assumes bash and requires: git, node, npm & mysql
 
-## Running
-
+    $ git clone https://github.com/psema4/node-eddn-client
+    $ cd node-eddn-client
+    $ npm install
+    $ mysql -u ${DBADMIN} -p < setup.sql
     $ node app.js
 
-## Background
+## License
 
-Source Thread https://forums.frontier.co.uk/showthread.php?t=57986
+MIT (see LICENSE)
 
-Inspired by https://github.com/jamesremuscat/EDDN
+## Issues
+
+Found a bug? Something else? Please enter an issue at https://github.com/psema4/node-eddn-client/issues
+
+## About EDDN
+The Elite: Dangerous Data Network is a volunteer-driven network for sharing data from the Elite: Dangerous universe.
+
+EDDN is not run by or affiliated with [Frontier Developments](http://www.frontier.co.uk/).
+
+## EDDN Extras
+
+* [Home](https://github.com/jamesremuscat/EDDN/wiki)
+* [Discussion](https://forums.frontier.co.uk/showthread.php?t=5798)
+
