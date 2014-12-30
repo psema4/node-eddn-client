@@ -1,0 +1,16 @@
+{
+  "name": "eddn-client",
+  "version": "0.0.0",
+  "description": "simple eddn client",
+  "main": "app.js",
+  "dependencies": {
+    "mysql": "~2.5.4",
+    "zmq": "~2.8.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "psema4",
+  "license": "MIT"
+}
