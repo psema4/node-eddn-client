@@ -32,5 +32,5 @@ EDDN is not run by or affiliated with [Frontier Developments](http://www.frontie
 ## EDDN Extras
 
 * [Home](https://github.com/jamesremuscat/EDDN/wiki)
-* [Discussion](https://forums.frontier.co.uk/showthread.php?t=5798)
+* [Discussion](https://forums.frontier.co.uk/showthread.php?t=57986)
 
