@@ -19,10 +19,14 @@ console.log('waiting for updates...');
 
 sock.on('message', function(message) {
     zlib.inflate(message, function(err, chunk) {
-        var payload = JSON.parse(chunk.toString('utf8'))
-          , header  = payload.header
-          , data    = payload.message
+        var payload   = JSON.parse(chunk.toString('utf8'))
+          , schemaRef = payload.$schemaRef
+          , header    = payload.header
+          , data      = payload.message
         ;
+
+        // ignore non-commodity data
+        if (schemaRef !== 'http://schemas.elite-markets.net/eddn/commodity/1') return;
 
         //fixme: escape data
         conn.query('INSERT INTO markets SET ?', strictify(data), function(err, result) {
